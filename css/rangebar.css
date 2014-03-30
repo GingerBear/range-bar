@@ -1,0 +1,80 @@
+.dragging {
+    cursor: ew-resize;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.range-bar {
+    min-height: 200px;
+}
+
+.range-bar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.range-bar li {
+    display: inline-block;
+}
+
+.range-bar>.bar-label {
+    display: none;
+}
+
+.range-bar .bar-slot {
+    position: relative;
+    margin-top: 100px;
+}
+
+.range-bar .bar-slot li {
+    background-color: #eee;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.range-bar .bar-slot .bar-slider {
+    display: inline-block;
+    width: 10px;
+    height: 40px;
+    background-color: #ccc;
+    position: relative;
+    top: -5px;
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+.range-bar .bar-slot li:nth-child(1) .bar-slider {
+    display: none;
+}
+
+.range-bar .bar-slot .bar-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    border-left: 1px dashed #ccc;
+    padding-left: 5px;
+}
+
+.range-bar .bar-slot .bar-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    border-left: 1px dashed #ccc;
+    padding-left: 5px;
+}
+
+.range-bar .bar-slot .bar-value {
+    position: absolute;
+    bottom: 3px;
+    left: 16px;
+    color: #fff;
+}
