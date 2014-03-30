@@ -46,7 +46,7 @@
 		for (var i = 0; i < labelNum; i++) {
 			result.push(avgWidth);
 			barListItems[i].style.width = ( avgWidth * 100 * (labelNum - i) ) + '%';
-			barListItems[i].style.backgroundColor = barListItems[i].dataset.color;
+			barListItems[i].style.backgroundColor = barListItems[i].dataset.color || "#eee";
 		}
 	}
 
