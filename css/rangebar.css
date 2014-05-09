@@ -10,6 +10,7 @@
 
 .range-bar {
     min-height: 200px;
+    margin-left: 200px;
 }
 
 .range-bar ul {
@@ -21,7 +22,7 @@
     display: inline-block;
 }
 
-.range-bar>.bar-label {
+.range-bar > .bar-label {
     display: none;
 }
 

@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
 
 	var body = document.body;
 	var barDiv = document.querySelector('.range-bar');
@@ -8,7 +8,6 @@
 	var barEl = document.createElement('ul');
 	var tempEl = "";
 	var isDragging = false;
-	var barOffsetLeft= barDiv.offsetLeft;
 	var draggingEl = null;
 	var draggingIndex = null;
 	var result = [];
@@ -48,7 +47,7 @@
 			barListItems[i].style.width = ( avgWidth * 100 * (labelNum - i) ) + '%';
 			barListItems[i].style.backgroundColor = barListItems[i].dataset.color || "#eee";
 		}
-	}
+	}	
 
 	var caculateRange = function() {
 		var logEl = "";
@@ -86,7 +85,9 @@
 	document.onmousemove = function(e) {
 		if (isDragging) {			
 			// prevent dragging out of range
-			var width = 1 - (e.pageX - barOffsetLeft) / barWidth;
+
+			var offetLeft = barDiv.getBoundingClientRect().left;
+			var width = 1 - (e.pageX - offetLeft) / barWidth;
 
 			if (width * barWidth >= leftElWidth) {
 				draggingEl.style.width = (leftElWidth / barWidth * 100) + "%";
@@ -115,4 +116,4 @@
 	reset();
 	caculateRange();
 
-})();
+});
